@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "507075293875",
+    "project_id": "playpointz",
+    "storage_bucket": "playpointz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507075293875:android:773941bca7654bb571b6c6",
+        "android_client_info": {
+          "package_name": "com.avanux.playpointz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507075293875-l5aht77qe6tf06pdjbps9cj0av63f0r6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgqjPFXNK1BqIBobrwkzTCTnpJoz0Nc2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507075293875-l5aht77qe6tf06pdjbps9cj0av63f0r6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "507075293875-7irc9r56h3ldpnpm10v492mr6br26co6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.avanux.playpointz",
+                "app_store_id": "1660002125"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

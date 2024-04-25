@@ -1,0 +1,1165 @@
+{
+	"info": {
+		"_postman_id": "13f34baf-4c1e-48d5-b18b-5d28e6edc434",
+		"name": "Play points",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3152624"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"Sanjeeva\",\n    \"password\":\"111111\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"username\": \"sanjeeva\",\n   \"password\": \"111111\",\n   \"email\": \"2kumara@gmail.com\",\n   \"full_name\": \"Sanjeeva Kumara\",\n   \"gender\": \"Male\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/player-controller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"player-controller"
+							]
+						},
+						"description": "**Password Rules**\n\n1.      At least one digit\n2.  At least one lowercase character\n3.  At least one uppercase character\n4.  At least one special character\n5.  At least 8 characters in length, but no more than 32"
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"sanjeewa@ceydigital.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/forgot-password",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\":\"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/reset-password/:token/:email",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"reset-password",
+								":token",
+								":email"
+							],
+							"variable": [
+								{
+									"key": "token",
+									"value": null
+								},
+								{
+									"key": "email",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check forgot token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auth/reset-password/334444",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"reset-password",
+								"334444"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auth/verify-email/5435434535",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"verify-email",
+								"5435434535"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "Get Item Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/item-categories-controller-player",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"item-categories-controller-player"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get New Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/item-controller-player-new?offset=0&limit=10&category=all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"item-controller-player-new"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "category",
+									"value": "all"
+								}
+							]
+						},
+						"description": "For get all categories send '**all**' or null. for get specific category send item category id."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Upcoming Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/item-controller-player-upcoming?offset=0&limit=10&category=all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"item-controller-player-upcoming"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "category",
+									"value": "all"
+								}
+							]
+						},
+						"description": "For get all categories send '**all**' or null. for get specific category send item category id."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/item-controller-player-all?category='new'",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"item-controller-player-all"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "'new'"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Purchase Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"item_id\":\"1486ddec-e8cd-4426-8041-a76324e23e20\",\n    \"event_id\":\"1486ddec-e8cd-4426-8041-a76324e23e20\",\n    \"points_paid\":\"1000\",\n    \"phone_no\":\"+94711440539\",\n    \"address\":\"Ceydigital\",\n    \"qty\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/order-controller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order-controller"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Get Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-controller-player",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-controller-player"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send support",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"sanjeeva\",\n    \"contact_no\":\"0711440539\",\n    \"subject\":\"Support\",\n    \"comment\":\"Support request\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-support-controller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-support-controller"
+							]
+						},
+						"description": "Required fields.\n\n*   name\n*   contact_no\n*   subject"
+					},
+					"response": []
+				},
+				{
+					"name": "Update profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"sanjeeva\",\n    \"email\":\"sanjeewa@ceydigital.com\",\n    \"full_name\":\"Sanjeeva Kumara\",\n    \"gender\":\"Male\",\n    \"date_of_birth\":\"1995/12/12\",\n    \"country\":\"Sri Lanka\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-controller-player",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-controller-player"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update settings",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"is_push_notification\":true,\n    \"is_email_notification\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-settings-controller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-settings-controller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get settings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-settings-controller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-settings-controller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\":111111,\n    \"new_password\":222222\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-controller-player-password",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-controller-player-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Friends",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/friendship-controller?offset=0&limit=10&search=test",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"friendship-controller"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "test"
+								}
+							]
+						},
+						"description": "**search** can be null"
+					},
+					"response": []
+				},
+				{
+					"name": "Invite Friends",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/invite/:token",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"invite",
+								":token"
+							],
+							"variable": [
+								{
+									"key": "token",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Images",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\":\"cover\",\n    \"profile_image\":\"base64\",\n    \"cover_image\":\"base64\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-controller-player-images",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-controller-player-images"
+							]
+						},
+						"description": "Required fields\n\n*   type\n*   profile_image or cover_image\n    \n\ntype status\n\n*   cover\n*   profile"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Get Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/order-controller-player?status=all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order-controller-player"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "all"
+								}
+							]
+						},
+						"description": "Status Texts\n\n*   all\n*   Placed\n*   Pending\n*   Processing\n*   Shipped\n*   Delivered"
+					},
+					"response": []
+				},
+				{
+					"name": "Add feedback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"item_purchase_id\":\"1486ddec-e8cd-4426-8041-a76324e23e20\",\n    \"feedback\" :\"feedback\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/order-feedback-controller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"order-feedback-controller"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "Get homepage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-post-controller-player?offset=0&limit=12",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-post-controller-player"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"base64_media\":\"text\",\"media_type\":\"Video\", \"description\":\"Desc\", \"media_url\":\"http://localhost:4200/admin/player/1486ddec-e8cd-4426-8041-a76324e23e20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-post-controller-player",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-post-controller-player"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"base64_media\":\"text\",\"media_type\":\"Video\", \"description\":\"Desc\", \"media_url\":\"http://localhost:4200/admin/player/1486ddec-e8cd-4426-8041-a76324e23e20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-post-controller-player/1486ddec-e8cd-4426-8041-a76324e23e20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-post-controller-player",
+								"1486ddec-e8cd-4426-8041-a76324e23e20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-post-controller-player/1486ddec-e8cd-4426-8041-a76324e23e20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-post-controller-player",
+								"1486ddec-e8cd-4426-8041-a76324e23e20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Report Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\":\"Post\",\n    \"description\":\"Reason\",\n    \"subject\":\"Banned\",\n    \"post_id\":\"1486ddec-e8cd-4426-8041-a76324e23e20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/disputes-controller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"disputes-controller"
+							]
+						},
+						"description": "Required Fields\n\n*   subject"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"player_id\":\"1486ddec-e8cd-4426-8041-a76324e23e20\",\n    \"post_id\":\"1486ddec-e8cd-4426-8041-a76324e23e20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/post-likes-controller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post-likes-controller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Like",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/post-likes-controller/1486ddec-e8cd-4426-8041-a76324e23e20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post-likes-controller",
+								"1486ddec-e8cd-4426-8041-a76324e23e20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"post_id\":\"1486ddec-e8cd-4426-8041-a76324e23e20\",\n    \"comment\":\"Comment\",\n    \"comment_id\":\"1486ddec-e8cd-4426-8041-a76324e23e20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/post-comments-controller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post-comments-controller"
+							]
+						},
+						"description": "Required fields\n\n*   post_id\n*   comment"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/post-comments-controller/1486ddec-e8cd-4426-8041-a76324e23e20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"post-comments-controller",
+								"1486ddec-e8cd-4426-8041-a76324e23e20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Ad Click",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ad_id\":\"1486ddec-e8cd-4426-8041-a76324e23e20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/ad-views-controller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ad-views-controller"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "### **Limit should be multiplier of three**"
+		},
+		{
+			"name": "Play",
+			"item": [
+				{
+					"name": "Get quizzes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/quiz-controller-player",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"quiz-controller-player"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit answers",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"1486ddec-e8cd-4426-8041-a76324e23e20\",\n    \"quiz_id\":\"1486ddec-e8cd-4426-8041-a76324e23e20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/quiz-controller-player",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"quiz-controller-player"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Friends",
+			"item": [
+				{
+					"name": "Get profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-controller-player-other/1486ddec-e8cd-4426-8041-a76324e23e20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-controller-player-other",
+								"1486ddec-e8cd-4426-8041-a76324e23e20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all players",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-controller-player-players?offset=0&limit=10&search=test",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-controller-player-players"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add friend",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"friendship_id\":\"1486ddec-e8cd-4426-8041-a76324e23e20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/friendship-controller",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"friendship-controller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove friends",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/friendship-controller/1486ddec-e8cd-4426-8041-a76324e23e20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"friendship-controller",
+								"1486ddec-e8cd-4426-8041-a76324e23e20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get friend suggestions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/friendship-controller-friend-suggestions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"friendship-controller-friend-suggestions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notifications",
+			"item": [
+				{
+					"name": "Get Notifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/player-notifications-controller?offset=0&limit=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"player-notifications-controller"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Notification",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1//player-notifications-controller/1486ddec-e8cd-4426-8041-a76324e23e20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"",
+								"player-notifications-controller",
+								"1486ddec-e8cd-4426-8041-a76324e23e20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ads",
+			"item": [
+				{
+					"name": "getAd",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/campaign-controller-player?offset=0&limit=10&placement=store&campaign_type=Banner",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"campaign-controller-player"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "placement",
+									"value": "store"
+								},
+								{
+									"key": "campaign_type",
+									"value": "Banner"
+								}
+							]
+						},
+						"description": "*   placement: **Feed,Store,Both**\n*   campaign_type: **Banner, Normal, Text**"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

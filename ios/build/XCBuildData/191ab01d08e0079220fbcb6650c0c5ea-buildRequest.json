@@ -1,0 +1,94 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98e5199a3f70555689be7018ee7f9f878d"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e989da425bb6d6d5d8dbb95e4afffb82217"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98312b4bc59bbbe2c06c205bf4da6737f5"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e987a4af56e2729cecfad7b13d62a9a5fa4"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e986dbfa2df59ddcae0f992dedaee8f3553"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98b7a881c3b0dd7865fc7e59ca8d94706c"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98c7508c3a173f39338f076ef697b954c4"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e981f000f066404b97b12e9c4ca84d38d0f"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e986f0e8be830d0d3c28782ddeefee89819"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98848ff9cf74c635f5324731538a1c853f"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98b35b2234c62e83383ef7c2509ddd49f7"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98af0c62a3e535a01b79b3da751afb6495"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e983786431ce548989b846bbf1a7384f58e"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e987b2c943ca8f06482a1660ce33301a7a5"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98903e66fa03d6d27edaa18126a82c20fd"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e988a0a5b40b007f81bee1472e4d0fb23da"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98857bd5cc69376a994ea9cb4969e9388e"
+    }
+  ],
+  "containerPath" : "/Users/shalikamadhushanka/Documents/PPTZ/playpointz_V3/ios/Pods/Pods.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/shalikamadhushanka/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/shalikamadhushanka/Library/Developer/Xcode/DerivedData/Pods-dtgzvrbgedhapkgzazgzdptgzbce/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/shalikamadhushanka/Library/Developer/Xcode/DerivedData/Pods-dtgzvrbgedhapkgzazgzdptgzbce/Index/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : false,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : false
+}

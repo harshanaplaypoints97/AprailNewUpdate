@@ -1,0 +1,48 @@
+Target dependency graph (17 targets)
+FMDB in Pods, no dependencies
+Flutter in Pods, no dependencies
+TOCropViewController-TOCropViewControllerBundle in Pods, no dependencies
+TOCropViewController in Pods, depends on:
+TOCropViewController-TOCropViewControllerBundle in Pods (explicit)
+app_links in Pods, depends on:
+Flutter in Pods (explicit)
+image_cropper in Pods, depends on:
+Flutter in Pods (explicit)
+TOCropViewController in Pods (explicit)
+image_picker_ios in Pods, depends on:
+Flutter in Pods (explicit)
+path_provider_ios in Pods, depends on:
+Flutter in Pods (explicit)
+share_plus in Pods, depends on:
+Flutter in Pods (explicit)
+shared_preferences_ios in Pods, depends on:
+Flutter in Pods (explicit)
+social_share in Pods, depends on:
+Flutter in Pods (explicit)
+sqflite in Pods, depends on:
+FMDB in Pods (explicit)
+Flutter in Pods (explicit)
+uni_links in Pods, depends on:
+Flutter in Pods (explicit)
+url_launcher_ios in Pods, depends on:
+Flutter in Pods (explicit)
+video_player_avfoundation in Pods, depends on:
+Flutter in Pods (explicit)
+wakelock in Pods, depends on:
+Flutter in Pods (explicit)
+Pods-Runner in Pods, depends on:
+FMDB in Pods (explicit)
+Flutter in Pods (explicit)
+TOCropViewController in Pods (explicit)
+app_links in Pods (explicit)
+image_cropper in Pods (explicit)
+image_picker_ios in Pods (explicit)
+path_provider_ios in Pods (explicit)
+share_plus in Pods (explicit)
+shared_preferences_ios in Pods (explicit)
+social_share in Pods (explicit)
+sqflite in Pods (explicit)
+uni_links in Pods (explicit)
+url_launcher_ios in Pods (explicit)
+video_player_avfoundation in Pods (explicit)
+wakelock in Pods (explicit)
